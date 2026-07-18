@@ -19,7 +19,7 @@
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
     "@types/node": "^20.17.0",
-    "esbuild": "^0.25.0"
+    "esbuild": "^0.25.0",
     "esbuild-plugin-pino": "^2.2.0"
   }
 }
