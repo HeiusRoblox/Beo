@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="admin.css?v=3" />
+</head>
+<body>
+
+  <div id="login-screen" class="screen">
+    <div class="login-box">
+      <h1>Admin Panel</h1>
+      <p class="subtitle">Key Management</p>
+      <div class="field">
+        <label>Password</label>
+        <input type="password" id="password-input" placeholder="Enter admin password" />
+      </div>
+      <div id="login-error" class="error-msg hidden"></div>
+      <button id="login-btn" class="btn btn-primary full">Login</button>
+    </div>
+  </div>
+
+  <div id="admin-screen" class="screen hidden">
+    <header>
+      <div class="header-left">
+        <h1>Key Management</h1>
+      </div>
+      <div class="header-right">
+        <button id="add-key-btn" class="btn btn-primary">+ New Key</button>
+        <button id="logout-btn" class="btn btn-ghost">Logout</button>
+      </div>
+    </header>
+
+    <main>
+      <div id="alert" class="alert hidden"></div>
+<div class="card">
+    <table id="keys-table">
+        <thead>
+            <tr>
+                <th>Key</th>
+                <th>Type</th>
+                <th>Max Device</th>
+                <th>Used</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody id="keys-body">
+            <tr>
+                <td colspan="6" class="empty">Loading...</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="card" id="device-card" style="display:none;margin-top:20px;">
+    <h2>Device Details</h2>
+
+    <p id="device-key-info" style="margin:10px 0;color:#666;font-size:14px;"></p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Device ID</th>
+                <th>Start Time</th>
+                <th>Expire Time</th>
+                <th>Time Left</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody id="device-body">
+        </tbody>
+    </table>
+</div>
+
+    </main>
+  </div>
+
+  <div id="modal-overlay" class="modal-overlay hidden">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 id="modal-title">New Key</h2>
+        <button id="modal-close" class="btn-icon">✕</button>
+      </div>
+      <div class="modal-body" id="modal-body"></div>
+      <div class="modal-footer">
+        <button id="modal-cancel" class="btn btn-ghost">Cancel</button>
+        <button id="modal-confirm" class="btn btn-primary">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="admin.js?v=2"></script>
+</body>
+</html>
