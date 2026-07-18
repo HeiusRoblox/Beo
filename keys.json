@@ -1,0 +1,10 @@
+[
+  {
+    "key": "ABC123",
+    "typeKey": "24H",
+    "maxDeviceIds": 2,
+    "deviceIds": [
+      { "id": "DEVICE-1", "startTime": 1753000000000, "expireTime": 1753086400000 }
+    ]
+  }
+]
